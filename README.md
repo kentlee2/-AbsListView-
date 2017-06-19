@@ -1,15 +1,6 @@
-# -AbsListView-
 android开发案例在AbsListView中使用倒计时
 ---
-layout: post
-title:  在在AbsListView中使用倒计时
-date:   2017-6-19 15:08:45 +0800
-categories: 原创
-tag: 教程
----
 
-* content
-{:toc}
 之前做云购项目遇到了倒计时的需求，当时用了很多办法也无法解决在AbsListView中倒计时复用的问题，卡顿、倒计时错误等问题无法解决，后来再参考了一些大神的博客后得到了一些启发，自己根据项目的需求进行了改进，所以就在此分享一下我的解决方案。
 
 在很多App中, 有多种多样的倒计时需求, 比如:
