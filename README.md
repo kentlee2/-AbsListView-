@@ -36,7 +36,7 @@ android开发案例在AbsListView中使用倒计时
 
 CountDownTask countDownTask = CountDownTask.create()
 
-倒计时时间
+设置倒计时时间
 
 long targetMillis = CountDownTask.elapsedRealtime() + 1000 * 60;
 final int CD_INTERVAL = 1000;
@@ -45,7 +45,7 @@ final int CD_INTERVAL = 1000;
 
 final int CD_INTERVAL = 1000;
 
-
+开始计时
 countDownTask.until(textView, targetMillis,CD_INTERVAL, 
  new OnCountDownListener() {
 
@@ -53,19 +53,17 @@ countDownTask.until(textView, targetMillis,CD_INTERVAL,
     
 public void onTick(View view, long millisUntilFinished) {
         
-((TextView)view).setText(String.valueOf(millisUntilFinished / CD_INTERVAL));
+  ((TextView)view).setText(String.valueOf(millisUntilFinished / CD_INTERVAL));
     
 }
     
-@Override
+ @Override
     
-public void onFinish(View view) {
+ public void onFinish(View view) {
         
-((TextView)view).setText("DONE.");
+  ((TextView)view).setText("DONE.");
     
-}
-});
-
-
+ }
+ });
 
 具体使用请看MainActivity.java和GridAdapter
