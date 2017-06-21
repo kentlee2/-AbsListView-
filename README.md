@@ -45,6 +45,7 @@ final int CD_INTERVAL = 1000;
 final int CD_INTERVAL = 1000;
 
 开始计时
+
 countDownTask.until(textView, targetMillis,CD_INTERVAL, 
  new OnCountDownListener() {
 
