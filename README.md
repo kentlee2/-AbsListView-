@@ -13,7 +13,7 @@ android开发案例在AbsListView中使用倒计时
 
 
 
-需求1有很多倒计时的方法，比较常用的计时方法是使用Android原生的CountDownTimer类 。相比需求-1,需求-2的难度更大, 性能要求更高: 因为AbsListView会涉及到ItemView重用的问题会使得管理定时器很麻烦, 另外如果定时地通过Base#notifyDataChanged()去刷新数据, 性能又相对较低, 也会引起滚动卡顿的问题. 因此, 此文主要解决的问题是如何合理地在AbsListView中使用倒计时.
+需求1有很多倒计时的方法，比较常用的计时方法是使用Android原生的CountDownTimer类 。相比需求-1,需求-2的难度更大, 性能要求更高: 因为AbsListView会涉及到ItemView重用的问题会使得管理定时器很麻烦, 另外如果定时地通过notifyDataChanged()去刷新数据, 性能又相对较低, 也会引起滚动卡顿的问题. 因此, 此文主要解决的问题是如何合理地在AbsListView中使用倒计时.
 
 **基本思路**
 1.使用CountDownTimer来完成基本倒计时功能
@@ -39,9 +39,8 @@ CountDownTask countDownTask = CountDownTask.create()
 设置倒计时时间
 
 long targetMillis = CountDownTask.elapsedRealtime() + 1000 * 60;
+
 final int CD_INTERVAL = 1000;
-
-
 
 final int CD_INTERVAL = 1000;
 
